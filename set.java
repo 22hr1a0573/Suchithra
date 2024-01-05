@@ -1,13 +1,30 @@
-class BSC{
-public int x;
-public void setX(int a){x=a;}
+
+import java.util.Scanner;
+class Student{
+
+private int id;
+private String name;
+public void setId(int id){this.id=id;}
+public void setName(String name){this.name=name;}
+public int getId(){ return this.id;}
+public String getName(){ return this.name;}
 }
-class BCA{
-public static void main(String args[])
-{
-System.out.println("Good Morning");
-BSC ob=new BSC();
-ob.setX(10);
-System.out.println("X:"+ob.x);
+class program{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+Student[] ob=new Student[3];
+
+for(int i=0;i<3;i++){
+ob[i]=new Student();
+ob[i]=setId(sc.nextInt());
+ob[i]=setName(sc.next());
+}
+System.out.println("Details are:\n");
+for(int j=0;j<3;j++){
+System.out.println("ID:"+ob[0].getId());
+System.out.println("Name:"+ob[0].getName());
+}
+
+ 
 }
 }
